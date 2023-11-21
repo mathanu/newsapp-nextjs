@@ -4,7 +4,7 @@ import MainNews from "./components/MainNews";
 import SecondaryMainNews from "./components/SecondaryMainNews";
 import {newsData } from "./Sanity/Api"
 
-export default async function Home({ children }) {
+export default async function Home() {
 
   const res = await newsData()  
   return (

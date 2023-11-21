@@ -1,21 +1,29 @@
 export const newsData = async () => {
     // Fetch data from external API
-    const res = await fetch(process.env.PRODAPI+"?limit=20&flag=true")
-    const result = await res.json()
-    const MainData = result?.filter(result1 => (result1.main === "1"))
-    const SecondaryData = result.filter(result2 => (result2.main === "0" ))
+    const res = await fetch(process.env.PRODAPI+"news/list?limit=20&flag=true")
+    const resultData = await res.json()
+    let MainData = [];
+    let SecondaryData= [] 
+    console.log("resultData>>>>>>>", resultData)
+    if(resultData)
+    {
+       MainData = resultData?.filter(result1 => (result1.main === "1"))
+       SecondaryData = resultData.filter(result2 => (result2.main === "0" ))
+
+    }
+ 
     return { MainData, SecondaryData};
   }
 
 export const fetchNewsDetail = async (id) => {
-  const data = await fetch("https://gxcmef9ngc.execute-api.ap-south-1.amazonaws.com/news/fetchbyid?ID="+id)
+  const data = await fetch(process.env.PRODAPI+"news/fetchbyid?ID="+id)
   const result = await data.json();
   console.log(result, id)
   return result;
 }
 
 export const fetchNewsList = async (slug) => {
-  const data = await fetch("https://gxcmef9ngc.execute-api.ap-south-1.amazonaws.com/list?type="+slug)
+  const data = await fetch(process.env.PRODAPI+"news/list?type="+slug)
   const result = await data.json();
   console.log(result, slug)
   return result;
