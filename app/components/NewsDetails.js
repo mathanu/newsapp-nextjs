@@ -1,0 +1,48 @@
+import React from "react";
+
+const NewsDetails = (props) => {
+
+          
+  const newsContent = props.data?.content?.split("###")
+  
+  return (
+  <div className="mx-6 md:mx-20 md:w-[60%]"> 
+    <div className="visible md:ml-0 md:mt-4 mt-12 md:m-0">
+      {/* <img src='https://tpc.googlesyndication.com/simgad/707352686305895210' /> */}
+    </div>
+    <div className='md:mt-10 mt-20'>
+    <span className="font-bold m-2 border border-b-gray-400 text-white md:p-2 p-1 bg-red-600">{props.data?.type}</span>
+    <span className="font-thin text-xs">Published: {new Date(props.data?.createdon).toLocaleString()} - {props.data?.createdby}</span>
+        <h1 className="font-extrabold md:text-2xl md:leading-10 leading-8 text-lg">{props.data?.title}</h1>   
+        {/* <SocialMediaButtons data={data}/> */}
+    </div>
+    
+    <div className='md:ml-20 md:mt-6'>
+     <img className="w-96 rounded-xl" alt="content-img" loading="eager" src={props.data?.image}></img>
+    </div>
+    {  newsContent?.map((news, index) => 
+    <div key={index} ><div className='md:ml-20 md:mt-6'>
+            <p className="mt-2 p-2 md:text-lg leading-8 md:font-[18px]">{news}</p>
+        </div><div className='md:ml-20 md:mt-10'>
+                {/* <img src='https://tpc.googlesyndication.com/simgad/707352686305895210' /> */}
+
+            </div></div>
+    )}
+    <div className='md:ml-20 md:mt-10 ml-5 mt-10'>
+    <h1 className='font-semibold'>Tags<hr></hr></h1>
+    <div className="mt-2 flex flex-wrap">
+    {  props.data?.tag?.map((tags, index) => 
+        <span className="p-2 ml-2 mt-2 bg-blue-400 h-12 md:font-medium text-base">{tags}</span>
+        
+    )}
+    </div>
+    </div>
+    <div className='md:ml-20 md:mt-10 ml-5 mt-10'>
+    <h1 className='font-semibold'>Read More News<hr></hr></h1>
+    {/* <SecondaryMainNews /> */}
+    </div>
+        </div>
+  );
+};
+
+export default NewsDetails;

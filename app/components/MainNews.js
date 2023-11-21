@@ -15,7 +15,7 @@ const MainNews = (props) => {
           
         </div>
         <div className="sm:md:p-2 m-4 md:bg-gradient-to-t z-30 relative sm:-mt-28 md:-mt-20 -mt-20 md:m-1 md:from-black md:w-[100%] md:relative p-2 bg-gradient-to-t from-black rounded-lg ">
-            <Link href="news/">
+            <Link href={"news/"+props.data._id}>
               <p className="text-white md:font-bold md:text-sm text-[13px]">
               {props.data.title}
               </p>

@@ -11,7 +11,7 @@ const SecondaryMainNews = (props) => {
             src={data?.image}
           />{" "}
           <div className="m-1">
-            <Link href="/newsd/">
+          <Link href={"news/"+data?._id}>
               <p className="md:text-[12px] text-[11px] font-bold md:leading-5 md:line-clamp-5 line-clamp-5 leading-2">
             {data?.title}
               </p>
