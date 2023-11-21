@@ -13,7 +13,7 @@ const NewsDetails = (props) => {
     <div className='md:mt-10 mt-20'>
     <span className="font-bold m-2 border border-b-gray-400 text-white md:p-2 p-1 bg-red-600">{props.data?.type}</span>
     <span className="font-thin text-xs">Published: {new Date(props.data?.createdon).toLocaleString()} - {props.data?.createdby}</span>
-        <h1 className="font-extrabold md:text-[21px] md:leading-10 leading-7 text-lg mt-4">{props.data?.title}</h1>   
+        <h1 className="font-extrabold md:text-[21px] md:leading-10 leading-7 text-lg mt-6">{props.data?.title}</h1>   
         {/* <SocialMediaButtons data={data}/> */}
     </div>
     

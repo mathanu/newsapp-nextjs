@@ -4,7 +4,6 @@ export const newsData = async () => {
     const resultData = await res.json()
     let MainData = [];
     let SecondaryData= [] 
-    console.log("resultData>>>>>>>", resultData)
     if(resultData)
     {
        MainData = resultData?.filter(result1 => (result1.main === "1"))
@@ -26,5 +25,11 @@ export const fetchNewsList = async (slug) => {
   const data = await fetch(process.env.PRODAPI+"news/list?type="+slug)
   const result = await data.json();
   console.log(result, slug)
+  return result;
+}
+
+export const fetchHoroscope = async () => {
+  const data = await fetch(process.env.PRODAPI+"horoscope/list")
+  const result = await data.json();
   return result;
 }

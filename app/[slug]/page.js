@@ -1,11 +1,21 @@
 import React from "react";
-import { fetchNewsList } from "../Sanity/Api";
+import { fetchNewsList, fetchHoroscope } from "../Sanity/Api";
 import NewsList from "../components/NewsList";
+import RaasiPalan from "../components/RaasiPalan";
 
 export default async function newslist({ params, searchParams }) {
-  const newsListData = await fetchNewsList(params.slug)
-  console.log(newsListData)
-    return <div>
+    let responseData = []
+    if(params.slug === 'sports')
+    {
+        responseData = await fetchNewsList(params.slug)
+    }
+
+    if(params.slug === 'raasipalan')
+    {
+        responseData = await fetchHoroscope()
+    }
+  
+  return <div>
       {/* <MetaDocument data={meta} /> */}
       {/* <meta property='keywords' content={fetchNewsDetails.englishtitle} />
         <meta property='title' content={fetchNewsDetails.title}/>
@@ -25,7 +35,8 @@ export default async function newslist({ params, searchParams }) {
         <meta property="og:image:height" content="900"/>
         <meta property="mobile-web-app-capable" content="yes"/>
         <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"></meta> */}
-      <NewsList data={newsListData}/>
+      { params.slug === 'sports' && <NewsList data={responseData}/> }
+      { params.slug === 'raasipalan' && <RaasiPalan data={responseData}/> }
     </div>
 
   }
