@@ -13,3 +13,10 @@ export const fetchNewsDetail = async (id) => {
   console.log(result, id)
   return result;
 }
+
+export const fetchNewsList = async (slug) => {
+  const data = await fetch("https://gxcmef9ngc.execute-api.ap-south-1.amazonaws.com/list?type="+slug)
+  const result = await data.json();
+  console.log(result, slug)
+  return result;
+}

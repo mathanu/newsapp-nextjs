@@ -1,20 +1,13 @@
 import React from "react";
-import { fetchNewsDetail } from "../../Sanity/Api";
-import NewsDetails from "../../components/NewsDetails"
+import { fetchNewsList } from "../Sanity/Api";
+import NewsList from "../components/NewsList";
 
-export default async function news({ params, searchParams }) {
-  const fetchNewsDetails = await fetchNewsDetail(params.id)
-
-  
-  const meta = {
-    description: fetchNewsDetails.title,
-    image: fetchNewsDetails.image,
-    url: process.env.PRODAPI+"news/"+params.id,
-    title: fetchNewsDetails.title,
-  }
+export default async function page({ params, searchParams }) {
+  const newsListData = await fetchNewsList(params.slug)
+  console.log(newsListData)
     return <div>
       {/* <MetaDocument data={meta} /> */}
-      <meta property='keywords' content={fetchNewsDetails.englishtitle} />
+      {/* <meta property='keywords' content={fetchNewsDetails.englishtitle} />
         <meta property='title' content={fetchNewsDetails.title}/>
         <meta property='og:title' content={fetchNewsDetails.title}/>
         <meta property='image' content={fetchNewsDetails.image} />
@@ -31,8 +24,8 @@ export default async function news({ params, searchParams }) {
         <meta property="og:image:width" content="1600"/>
         <meta property="og:image:height" content="900"/>
         <meta property="mobile-web-app-capable" content="yes"/>
-        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"></meta>
-      <NewsDetails data={fetchNewsDetails}/>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"></meta> */}
+      <NewsList data={newsListData}/>
     </div>
 
   }
