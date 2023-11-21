@@ -2,7 +2,7 @@ import React from "react";
 import { fetchNewsList } from "../Sanity/Api";
 import NewsList from "../components/NewsList";
 
-export default async function page({ params, searchParams }) {
+export default async function newslist({ params, searchParams }) {
   const newsListData = await fetchNewsList(params.slug)
   console.log(newsListData)
     return <div>
