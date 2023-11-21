@@ -12,9 +12,9 @@ export default async function Home({ children }) {
   return (
     <div>
       <HeaderCmp />
-      <div className="md:mx-auto md:w-[50%]">
+      <div className="sm:md:mx-auto sm:md:w-[50%]">
       <BreakingNews />
-        <div className="md:flex">
+        <div className="sm:md:flex">
         {res.MainData?.map((resultData) => 
           <MainNews data={resultData}/>
         )}
