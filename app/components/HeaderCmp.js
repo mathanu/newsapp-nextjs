@@ -8,7 +8,7 @@ const HeaderCmp = () => {
     <div className="invisible sm:visible md:visible lg:visible">
         <ul className="md:flex md:p-2 md:mx-56 md:m-2 md:text-sm md:font-extrabold">
             <li className="px-4  hover:text-yellow-500 cursor-pointer">முகப்பு</li>
-            <li className="px-4  hover:text-yellow-500 cursor-pointer"><Link href="/newsl/sports">விளையாட்டு</Link></li>
+            <li className="px-4  hover:text-yellow-500 cursor-pointer"><Link href="/newsl/sports"> விளையாட்டு</Link></li>
             <li className="px-4  hover:text-yellow-500 cursor-pointer"><Link href="/newsl/cinema">சினிமா</Link></li>
             <li className="px-4  hover:text-yellow-500 cursor-pointer"><Link href="/newsl/lifestyle">லைஃப்ஸ்டைல்</Link></li>
             <li className="px-4  hover:text-yellow-500 cursor-pointer"><Link href="/newsl/technology">தொழில்நுட்பம்</Link></li>
