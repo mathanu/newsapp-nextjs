@@ -1,6 +1,7 @@
 import BreakingNews from "./components/BreakingNews";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
+import HeaderCmp from "./components/HeaderCmp";
+import Header from "./components/HeaderCmp";
 import MainNews from "./components/MainNews";
 import SecondaryMainNews from "./components/SecondaryMainNews";
 import {newsData } from "./Sanity/Api"
@@ -13,7 +14,7 @@ export default async function Home({ children }) {
   
   return (
     <div>
-      <Header />
+      <HeaderCmp />
       <div className="mx-auto w-[50%] ">
       <BreakingNews />
         <div className="flex">

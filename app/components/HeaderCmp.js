@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-const Header = () => {
+const HeaderCmp = () => {
     return <div className="w-full md:h-16 md:flex md:justify-between md:border-b md:border-gray-400 h-9 border-b border-gray-400">
     <div className="m-4 -mt-1 md:mx-12 md:p-2 h-10 w-24">
     <img src="https://i.ibb.co/VT0gnCb/Whats-App-Image-2023-11-14-at-9-43-18-PM.jpg" alt="logo" className="md:h-14 md:w-20 h-10 mt-1 md:mt-0 w-10"  border="0" />
@@ -25,4 +25,4 @@ const Header = () => {
     </div>;
 }
 
-export default Header;
+export default HeaderCmp;
