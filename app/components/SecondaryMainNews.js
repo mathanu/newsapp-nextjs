@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 const SecondaryMainNews = (props) => {
   return (
-      <div className="flex flex-wrap border-b border-gray-400 md:grid md:grid-cols-5">
+      <div className="md:flex md:flex-wrap md:m-0 m-4 border-b border-gray-400 grid grid-cols-2 md:grid-cols-5">
       { props.data?.map((data) => 
         <div className="md:m-2  md:mt-1 md:h-56 md:w-36 md:rounded-lg hover:bg-yellow-200 shadow-lg">
           <img
@@ -12,7 +12,7 @@ const SecondaryMainNews = (props) => {
           />{" "}
           <div className="m-1">
             <Link href="/newsd/">
-              <p className="text-[12px] font-bold md:leading-5 md:line-clamp-5 line-clamp-5 leading-2">
+              <p className="md:text-[12px] text-[10px] font-bold md:leading-5 md:line-clamp-5 line-clamp-5 leading-2">
             {data?.title}
               </p>
             </Link>

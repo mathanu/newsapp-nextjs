@@ -8,16 +8,13 @@ import {newsData } from "./Sanity/Api"
 
 export default async function Home({ children }) {
 
-  const res = await newsData()
-  console.log("___________________________", res.MainData)
-
-  
+  const res = await newsData()  
   return (
     <div>
       <HeaderCmp />
-      <div className="mx-auto w-[50%] ">
+      <div className="md:mx-auto md:w-[50%]">
       <BreakingNews />
-        <div className="flex">
+        <div className="md:flex">
         {res.MainData?.map((resultData) => 
           <MainNews data={resultData}/>
         )}
