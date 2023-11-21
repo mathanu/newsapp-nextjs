@@ -13,16 +13,16 @@ const NewsDetails = (props) => {
     <div className='md:mt-10 mt-20'>
     <span className="font-bold m-2 border border-b-gray-400 text-white md:p-2 p-1 bg-red-600">{props.data?.type}</span>
     <span className="font-thin text-xs">Published: {new Date(props.data?.createdon).toLocaleString()} - {props.data?.createdby}</span>
-        <h1 className="font-extrabold md:text-2xl md:leading-10 leading-8 text-lg">{props.data?.title}</h1>   
+        <h1 className="font-extrabold md:text-[21px] md:leading-10 leading-7 text-lg mt-4">{props.data?.title}</h1>   
         {/* <SocialMediaButtons data={data}/> */}
     </div>
     
-    <div className='md:ml-20 md:mt-6'>
+    <div className='md:ml-20 mt-6'>
      <img className="w-96 rounded-xl" alt="content-img" loading="eager" src={props.data?.image}></img>
     </div>
     {  newsContent?.map((news, index) => 
     <div key={index} ><div className='md:ml-20 md:mt-6'>
-            <p className="mt-2 p-2 md:text-lg leading-8 md:font-[18px]">{news}</p>
+            <p className="mt-2 p-2 md:text-[17px] leading-7 md:font-[18px]">{news}</p>
         </div><div className='md:ml-20 md:mt-10'>
                 {/* <img src='https://tpc.googlesyndication.com/simgad/707352686305895210' /> */}
 

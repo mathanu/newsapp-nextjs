@@ -19,13 +19,13 @@ export default function RootLayout({ children }) {
     
       <body >
       <NextTopLoader color="#FF0000"
-  initialPosition={0.08}
+  initialPosition={2.0}
   crawlSpeed={1000}
   height={3}
   crawl={true}
   showSpinner={true}
   easing="ease"
-  speed={200}
+  speed={1000}
   shadow="0 0 10px #FF0000,0 0 5px #FF0000"
   template='<div class="bar" role="bar"><div class="peg"></div></div> 
   <div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
