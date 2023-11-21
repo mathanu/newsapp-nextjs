@@ -14,16 +14,16 @@ export default async function news({ params, searchParams }) {
   }
     return <div>
       {/* <MetaDocument data={meta} /> */}
-      <meta name='keywords' content='Latest Tamil news, Latest SPorts news, big boss tamil, tamilnadu news, kollywood news, politiocs, tamil seithigal, trending' />
-        <meta name='title' content={fetchNewsDetails.title}/>
-        <meta name='og:image' content={fetchNewsDetails.image} />
-        <meta name='og:description' content={fetchNewsDetails.description} />
-        <meta name='og:url' content={fetchNewsDetails.url}/>
-        <meta name="twitter:card" value="summary_large_image"/>
-      <meta name="twitter:site" value="@tamilnewsinfo"/>
+      <meta property='keywords' content='Latest Tamil news, Latest SPorts news, big boss tamil, tamilnadu news, kollywood news, politiocs, tamil seithigal, trending' />
+        <meta property='title' content={fetchNewsDetails.title}/>
+        <meta property='og:image' content={fetchNewsDetails.image} />
+        <meta property='og:description' content={fetchNewsDetails.description} />
+        <meta property='og:url' content={fetchNewsDetails.url}/>
+        <meta property="twitter:card" value="summary_large_image"/>
+      <meta property="twitter:site" value="@tamilnewsinfo"/>
       <meta property="og:image:width" content="1070"/>
       <meta property="og:image:height" content="580"/>
-      <meta name="mobile-web-app-capable" content="yes"/>
+      <meta property="mobile-web-app-capable" content="yes"/>
       <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"></meta>
       <NewsDetails data={fetchNewsDetails}/>
     </div>
