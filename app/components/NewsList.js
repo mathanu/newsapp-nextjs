@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const NewsList = ({ data }) => {
   return (
@@ -24,9 +25,11 @@ const NewsList = ({ data }) => {
                 <span className="text-[10px] text-red-700 font-bold p-1">
                   {news.readmins}
                 </span>
+                <Link href={"news/"+news._id}>
                 <p className="text-xs font-semibold line-clamp-4">
                   {news?.title}
                 </p>
+                </Link>
               </div>
             </div>
           ))}
