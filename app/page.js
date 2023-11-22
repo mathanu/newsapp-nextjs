@@ -9,7 +9,7 @@ export default async function Home() {
   const res = await newsData()  
   return (
     <div>
-      <div className="sm:md:mx-auto sm:md:w-[50%]">
+      <div className="sm:md:mx-auto sm:md:w-[60%]">
       <BreakingNews />
         <div className="sm:md:flex">
         {res.MainData?.map((resultData) => 
