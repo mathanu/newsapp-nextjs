@@ -2,7 +2,7 @@ import React from "react";
 
 const NewsDetails = (props) => {
   const newsContent = props.data?.content?.split("###");
-
+  console.log(props.data)
   return (
     <div className="mx-6 md:mx-20 md:w-[60%]">
       <div className="visible md:ml-0 md:mt-4 mt-12 md:m-0">
@@ -36,6 +36,7 @@ const NewsDetails = (props) => {
               {news}
             </p>
           </div>
+          {  (index%2 === 0) && props.data?.additionalimage && <div  className="md:ml-20 md:mt-10"><img src={props.data?.additionalimage[index-1]} /> </div> }
           <div className="md:ml-20 md:mt-10">
             {/* <img src='https://tpc.googlesyndication.com/simgad/707352686305895210' /> */}
           </div>
