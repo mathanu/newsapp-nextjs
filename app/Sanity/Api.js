@@ -1,6 +1,6 @@
 export const newsData = async () => {
     // Fetch data from external API
-    const res = await fetch(process.env.PRODAPI+"news/list?limit=20&flag=true")
+    const res = await fetch(process.env.PRODAPI+"news/list?limit=20&flag=true", { cache: 'no-store' })
     const resultData = await res.json()
     let MainData = [];
     let SecondaryData= [] 
@@ -22,7 +22,7 @@ export const fetchNewsDetail = async (id) => {
 }
 
 export const fetchNewsList = async (slug) => {
-  const data = await fetch(process.env.PRODAPI+"news/list?type="+slug)
+  const data = await fetch(process.env.PRODAPI+"news/list?type="+slug, { cache: 'no-store' })
   const result = await data.json();
   console.log(result, slug)
   return result;
