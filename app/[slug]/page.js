@@ -5,7 +5,7 @@ import RaasiPalan from "../components/RaasiPalan";
 
 export default async function newslist({ params, searchParams }) {
     let responseData = []
-    if(params.slug === 'sports')
+    if(params.slug === 'sports' || params.slug === 'cinema')
     {
         responseData = await fetchNewsList(params.slug)
     }
@@ -14,6 +14,7 @@ export default async function newslist({ params, searchParams }) {
     {
         responseData = await fetchHoroscope()
     }
+
   
   return <div>
       {/* <MetaDocument data={meta} /> */}
@@ -35,7 +36,7 @@ export default async function newslist({ params, searchParams }) {
         <meta property="og:image:height" content="900"/>
         <meta property="mobile-web-app-capable" content="yes"/>
         <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"></meta> */}
-      { params.slug === 'sports' && <NewsList data={responseData}/> }
+      { (params.slug === 'sports' || params.slug === 'cinema') && <NewsList data={responseData}/> }
       { params.slug === 'raasipalan' && <RaasiPalan data={responseData}/> }
     </div>
 
