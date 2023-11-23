@@ -7,10 +7,10 @@ import NextTopLoader from "nextjs-toploader";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// export const metadata = {
-//   title: 'Tamil News Info',
-//   description: 'Latest Tamil news, Latest SPorts news, big boss tamil, tamilnadu news, kollywood news, politiocs, tamil seithigal, trending',
-// }
+export const metadata = {
+  title: 'Tamil News Info',
+  description: 'Latest Tamil news, Latest SPorts news, big boss tamil, tamilnadu news, kollywood news, politiocs, tamil seithigal, trending',
+}
 
 export default function RootLayout({ children }) {
   return (

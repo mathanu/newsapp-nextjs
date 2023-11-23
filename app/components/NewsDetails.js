@@ -4,7 +4,7 @@ const NewsDetails = (props) => {
   const newsContent = props.data?.content?.split("###");
   console.log(props.data)
   return (
-    <div className="mx-6 md:mx-20 md:w-[60%]">
+    <div className="mx-6 md:mx-20 md:w-[60%] md:mt-[70px] mt-[100px]">
       <div className="visible md:ml-0 md:mt-4 mt-12 md:m-0">
         {/* <img src='https://tpc.googlesyndication.com/simgad/707352686305895210' /> */}
       </div>
@@ -16,7 +16,7 @@ const NewsDetails = (props) => {
           Published: {new Date(props.data?.createdon).toLocaleString()} -{" "}
           {props.data?.createdby}
         </span>
-        <h1 className="font-extrabold md:text-[21px] md:leading-10 leading-7 text-lg mt-6">
+        <h1 className="font-extrabold md:text-[21px] md:leading-10 leading-7 text-lg mt-4">
           {props.data?.title}
         </h1>
         {/* <SocialMediaButtons data={data}/> */}
