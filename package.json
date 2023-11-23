@@ -12,7 +12,8 @@
     "next": "14.0.3",
     "nextjs-toploader": "^1.6.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-social-icons": "^6.6.0"
   },
   "devDependencies": {
     "@types/node": "20.9.3",
