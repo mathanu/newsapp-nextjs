@@ -20,7 +20,7 @@ const HeaderCmp = () => {
         <ul className="flex ">
             <li className="hover:text-yellow-500 cursor-pointer"><Link href="/">முகப்பு</Link></li>
             <li className="px-4  hover:text-yellow-500 cursor-pointer"><Link href="/sports">விளையாட்டு</Link></li>
-            <li className="px-4  hover:text-yellow-500 cursor-pointer">சினிமா</li>
+            <li className="px-4  hover:text-yellow-500 cursor-pointer"><Link href="/cinema">சினிமா</Link></li>
         </ul>
     </div>
     </div>;

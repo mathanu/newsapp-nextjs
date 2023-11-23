@@ -1,6 +1,5 @@
 import React from "react";
 import { fetchNewsDetail } from "../../Sanity/Api";
-import NewsDetails from "../../components/NewsDetails"
 
 export default async function news({ params, searchParams }) {
   const fetchNewsDetails = await fetchNewsDetail(params.id)
