@@ -1,5 +1,6 @@
 import React from "react";
 import { fetchNewsDetail } from "../../Sanity/Api";
+import NewsDetails from "../../components/newsdetails";
 
 export default async function news({ params, searchParams }) {
   const fetchNewsDetails = await fetchNewsDetail(params.id)
@@ -31,7 +32,7 @@ export default async function news({ params, searchParams }) {
         <meta property="og:image:height" content="900"/>
         <meta property="mobile-web-app-capable" content="yes"/>
         <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"></meta>
-      <NewsDetails data={fetchNewsDetails}/>
+<NewsDetails data={fetchNewsDetails} />
     </div>
 
   }
