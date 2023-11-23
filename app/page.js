@@ -14,7 +14,7 @@ export default async function Home() {
     <div className={inter.className}>
       <div className="sm:md:mx-auto sm:md:w-[60%]">
       <BreakingNews />
-        <div className="sm:md:flex">
+        <div className="sm:md:flex md:mt-0 mt-16">
         {res.MainData?.map((resultData) => 
           <MainNews data={resultData}/>
         )}
