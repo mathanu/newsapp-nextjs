@@ -4,7 +4,7 @@ const RaasiPalan = ({data}) => {
 
 
   return (
-    <div>
+    <div className="mt-[60px]">
       <div className="visible md:mx-auto md:w-[50%] mt-16 md:m-2 ml-8">
         <img src="https://tpc.googlesyndication.com/simgad/707352686305895210" />
       </div>

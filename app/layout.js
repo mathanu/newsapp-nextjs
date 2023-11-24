@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: 'Tamil News Info',
   description: 'Latest Tamil news, Latest SPorts news, big boss tamil, tamilnadu news, kollywood news, politiocs, tamil seithigal, trending',
-  keywords: 'Latest Tamil news, Latest SPorts news, big boss tamil, tamilnadu news, kollywood news, politiocs, tamil seithigal, trending, bigg boss updates in tamil, cook with comali, vijay tv promos, sun tv serial updates, today serailupdates in tamil, today raasipalan in tamil, cooking tips in tamil, healthy life style in tamil, trending tamil news, today trending, trending news, technology updates in tamil',
+  keywords: 'Latest Tamil news, Latest SPorts news, big boss tamil, tamilnadu news, kollywood news, politiocs, tamil seithigal, trending, bigg boss updates in tamil, cook with comali, vijay tv promos, sun tv serial updates, today serailupdates in tamil, today raasipalan in tamil, cooking tips in tamil, healthy life style in tamil, trending tamil news, today trending, trending news, technology updates in tamil, online tamil news, tamil news portal, tamil actors, tamil actresses, astrology news in tamil, chennai news, கேலரி, ஜோதிடம, இலக்கியம, ஆன்மீகம, தமிழ் வீடியோ, தமிழ சினிமா, கோலிவுட , நடிகைகள்,  நடிகர், திரைப் படங்கள்"',
 }
 
 export default function RootLayout({ children }) {

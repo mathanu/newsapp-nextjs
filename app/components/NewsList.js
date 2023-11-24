@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const NewsList = ({ data }) => {
   return (
-    <div>
-      <div className="visible md:mx-auto  md:m-2 ml-8 mt-16 mx-2 w-[50%]">
+    <div className="mt-[60px]">
+      <div className="md:mx-auto  md:m-2 ml-8 mt-[100px] mx-2 w-[50%]">
         <img src="https://tpc.googlesyndication.com/simgad/707352686305895210" />
       </div>
       <div className="md:mx-52 md:border-b md:w-full md:border-gray-400  md:flex m-4 shadow-xl">

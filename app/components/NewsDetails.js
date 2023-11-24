@@ -1,4 +1,5 @@
 import React from "react";
+import dateFormat from 'dateformat';
 
 const NewsDetails = (props) => {
   const newsContent = props.data?.content?.split("###");
@@ -13,7 +14,7 @@ const NewsDetails = (props) => {
           {props.data?.type}
         </span>
         <span className="font-thin text-xs">
-          Published: {new Date(props.data?.createdon).toLocaleString()} -{" "}
+          Published: { dateFormat( new Date(props.data?.createdon), "mmmm dS, yyyy - h:MM TT") } - {" "}
           {props.data?.createdby}
         </span>
         <h1 className="font-extrabold md:text-[21px] md:leading-10 leading-7 text-lg mt-4">
@@ -36,7 +37,7 @@ const NewsDetails = (props) => {
               {news}
             </p>
           </div>
-          {  (index%2 === 0) && props.data?.additionalimage && <div  className="md:ml-20 md:mt-10"><img src={props.data?.additionalimage[index]} /> </div> }
+          {  (index%2 === 0) && props.data?.additionalimage && <div className="md:ml-20 md:mt-10"><img src={props.data?.additionalimage[index]} /> </div> }
           <div className="md:ml-20 md:mt-10">
             {/* <img src='https://tpc.googlesyndication.com/simgad/707352686305895210' /> */}
           </div>
