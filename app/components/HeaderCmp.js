@@ -25,7 +25,7 @@ const HeaderCmp = () => {
         </ul>
     </div>
     <div className="md:p-1 md:-mt-0  flex -mt-[80px] justify-end">
-    <SocialIcon url="https://www.facebook.com/profile.php?id=61553449097172" style={{height:"25px", width:"30px"}}/>
+    <SocialIcon url="https://www.facebook.com//profile.php?100067295215196" style={{height:"25px", width:"30px"}}/>
     <SocialIcon url="https://twitter.com/reach2newsapp" style={{height:"25px", width:"30px"}} />
     <SocialIcon url="https://www.youtube.com/channel/UCvRdeCsdOspBsDoL6sITmNQ" style={{height:"25px", width:"30px"}} />
     </div>
