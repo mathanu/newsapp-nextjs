@@ -22,6 +22,9 @@ const HeaderCmp = () => {
             <li className="hover:text-yellow-500 cursor-pointer"><Link href="/">முகப்பு</Link></li>
             <li className="px-4  hover:text-yellow-500 cursor-pointer"><Link href="/sports">விளையாட்டு</Link></li>
             <li className="px-4  hover:text-yellow-500 cursor-pointer"><Link href="/cinema">சினிமா</Link></li>
+            <li className="px-4  hover:text-yellow-500 cursor-pointer"><Link href="/lifestyle">லைஃப்ஸ்டைல்</Link></li>
+            <li className="px-4  hover:text-yellow-500 cursor-pointer"><Link href="/technology">தொழில்நுட்பம்</Link></li>
+            <li className="px-4  hover:text-yellow-500 cursor-pointer"><Link href="/raasipalan">ராசிபலன்</Link></li>
         </ul>
     </div>
     <div className="md:p-1 md:-mt-0  flex -mt-[80px] justify-end">
