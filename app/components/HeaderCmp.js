@@ -17,8 +17,8 @@ const HeaderCmp = () => {
             <li className="px-4  hover:text-yellow-500 cursor-pointer"><Link href="/raasipalan">ராசிபலன்</Link></li>
         </ul>
     </div>
-    <div className="visible -mt-[152px] z-20 font-bold bg-white p-2 m-2 overflow-x-hidden sm:invisible md:invisible lg:invisible border-b border-gray-400">
-        <ul className="flex ">
+    <div className="visible -mt-[152px] z-20 font-bold bg-white p-2 m-2 sm:invisible md:invisible lg:invisible border-b border-gray-400">
+        <ul className="flex overflow-scroll">
             <li className="hover:text-yellow-500 cursor-pointer"><Link href="/">முகப்பு</Link></li>
             <li className="px-4  hover:text-yellow-500 cursor-pointer"><Link href="/sports">விளையாட்டு</Link></li>
             <li className="px-4  hover:text-yellow-500 cursor-pointer"><Link href="/cinema">சினிமா</Link></li>
@@ -28,7 +28,7 @@ const HeaderCmp = () => {
         </ul>
     </div>
     <div className="md:p-1 md:-mt-0  flex -mt-[80px] justify-end">
-    <SocialIcon url="https://www.facebook.com//profile.php?100067295215196" style={{height:"25px", width:"30px"}}/>
+    <SocialIcon url="https://www.facebook.com/profile.php?100067295215196" style={{height:"25px", width:"30px"}}/>
     <SocialIcon url="https://twitter.com/reach2newsapp" style={{height:"25px", width:"30px"}} />
     <SocialIcon url="https://www.youtube.com/channel/UCvRdeCsdOspBsDoL6sITmNQ" style={{height:"25px", width:"30px"}} />
     </div>
