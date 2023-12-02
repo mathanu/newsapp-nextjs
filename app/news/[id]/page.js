@@ -7,10 +7,10 @@ export default async function news({ params, searchParams }) {
 
   
   const meta = {
-    description: fetchNewsDetails.title,
-    image: fetchNewsDetails.image,
+    description: fetchNewsDetails?.list.title,
+    image: fetchNewsDetails?.list.image,
     url: process.env.PRODAPI+"news/"+params.id,
-    title: fetchNewsDetails.title,
+    title: fetchNewsDetails?.list.title,
   }
     return <div>
       {/* <MetaDocument data={meta} /> */}
