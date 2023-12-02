@@ -2,8 +2,8 @@ import React from "react";
 import dateFormat from 'dateformat';
 
 const NewsDetails = (props) => {
-  const newsContent = props.data?.content?.split("###");
-  console.log(props.data)
+  const newsContent = props.data?.list?.content?.split("###");
+  console.log(props.data?.list)
   return (
     <div className="mx-6 md:mx-20 md:w-[60%] md:mt-[70px] mt-[100px]">
       <div className="visible md:ml-0 md:mt-4 mt-12 md:m-0">
@@ -11,14 +11,14 @@ const NewsDetails = (props) => {
       </div>
       <div className="md:mt-10 mt-20">
         <span className="font-bold m-2 border border-b-gray-400 text-white md:p-2 p-1 bg-red-600">
-          {props.data?.type}
+          {props.data?.list?.type}
         </span> 
         <span className="font-thin text-xs">
-          Published: { dateFormat( new Date(props.data?.createdon), "mmmm dS, yyyy - h:MM TT") } - {" "}
-          {props.data?.createdby}
+          Published: { dateFormat( new Date(props.data?.list?.createdon), "mmmm dS, yyyy - h:MM TT") } - {" "}
+          {props.data?.list?.createdby}
         </span>
         <h1 className="font-extrabold md:text-[21px] md:leading-10 leading-7 text-lg mt-4">
-          {props.data?.title}
+          {props.data?.list?.title}
         </h1>
         <span className="text-[11px] font-extralight">Total Read - {100 + props?.data?.ReadCount} </span>
         {/* <SocialMediaButtons data={data}/> */}
@@ -28,7 +28,7 @@ const NewsDetails = (props) => {
         <img
           className="w-96 rounded-xl object-contain"
           alt="content-img"
-          src={props.data?.image}
+          src={props.data?.list?.image}
         ></img>
       </div>
       {newsContent?.map((news, index) => (
@@ -38,7 +38,7 @@ const NewsDetails = (props) => {
               {news}
             </p>
           </div>
-          { props.data?.additionalimage && <div className="md:ml-20 md:mt-10"><img className="rounded-xl object-contain" src={props.data?.additionalimage[index]} /> </div> }
+          { props.data?.list?.additionalimage && <div className="md:ml-20 md:mt-10"><img className="rounded-xl object-contain" src={props.data?.list?.additionalimage[index]} /> </div> }
           <div className="md:ml-20 md:mt-10">
             <img src='https://tpc.googlesyndication.com/simgad/707352686305895210' />
           </div>
@@ -49,7 +49,7 @@ const NewsDetails = (props) => {
           Tags<hr></hr>
         </h1>
         <div className="mt-2 flex flex-wrap">
-          {props.data?.tag?.map((tags, index) => (
+          {props.data?.list?.tag?.map((tags, index) => (
             <span className="p-2 ml-2 mt-2 bg-blue-400 h-12 md:font-medium text-base">
               {tags}
             </span>
@@ -60,7 +60,7 @@ const NewsDetails = (props) => {
         <h1 className="font-semibold">
           Read More News<hr></hr>
         </h1>
-        {/* <SecondaryMainNews /> */}
+        <SecondaryMainNews data={props?.data?.readMore} />
       </div>
     </div>
   );
