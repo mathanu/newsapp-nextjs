@@ -20,7 +20,7 @@ const NewsDetails = (props) => {
         <h1 className="font-extrabold md:text-[21px] md:leading-10 leading-7 text-lg mt-4">
           {props.data?.list?.title}
         </h1>
-        <span className="text-[11px] font-extralight">Total Read - {100 + props?.data?.list?.ReadCount} </span>
+        <span className="text-[11px] font-extralight">Total Views - {100 + props?.data?.list?.ReadCount} </span>
         {/* <SocialMediaButtons data={data}/> */}
       </div>
 
