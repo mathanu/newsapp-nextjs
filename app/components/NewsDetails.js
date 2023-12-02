@@ -61,7 +61,7 @@ const NewsDetails = (props) => {
         <h1 className="font-semibold">
           Read More News<hr></hr>
         </h1>
-        <SecondaryMainNews data={props?.data?.readMore} />
+       { props?.data?.readMore && <SecondaryMainNews data={props?.data?.readMore} /> }
       </div>
     </div>
   );
