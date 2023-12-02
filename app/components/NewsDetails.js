@@ -1,5 +1,6 @@
 import React from "react";
 import dateFormat from 'dateformat';
+import SecondaryMainNews from "./SecondaryMainNews";
 
 const NewsDetails = (props) => {
   const newsContent = props.data?.list?.content?.split("###");
