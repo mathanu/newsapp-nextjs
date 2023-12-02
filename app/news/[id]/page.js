@@ -5,8 +5,6 @@ import NewsDetails from "../../components/NewsDetails";
 export default async function news({ params, searchParams }) {
   const fetchNewsDetails = await fetchNewsDetail(params.id)
 
-  console.log(">>>>>>>>>>>>>>>>>>>>>>", fetchNewsDetails);
-
   const meta = {
     description: fetchNewsDetails?.list.title,
     image: fetchNewsDetails?.list.image,

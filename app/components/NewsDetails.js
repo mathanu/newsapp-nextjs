@@ -4,7 +4,6 @@ import SecondaryMainNews from "./SecondaryMainNews";
 
 const NewsDetails = (props) => {
   const newsContent = props.data?.list?.content?.split("###");
-  console.log(props.data?.list)
   return (
     <div className="mx-6 md:mx-20 md:w-[60%] md:mt-[70px] mt-[100px]">
       <div className="visible md:ml-0 md:mt-4 mt-12 md:m-0">
@@ -21,7 +20,7 @@ const NewsDetails = (props) => {
         <h1 className="font-extrabold md:text-[21px] md:leading-10 leading-7 text-lg mt-4">
           {props.data?.list?.title}
         </h1>
-        <span className="text-[11px] font-extralight">Total Read - {100 + props?.data?.ReadCount} </span>
+        <span className="text-[11px] font-extralight">Total Read - {100 + props?.data?.list?.ReadCount} </span>
         {/* <SocialMediaButtons data={data}/> */}
       </div>
 
@@ -61,7 +60,7 @@ const NewsDetails = (props) => {
         <h1 className="font-semibold">
           Read More News<hr></hr>
         </h1>
-       { props?.data?.readMore && <SecondaryMainNews data={props?.data?.readMore} /> }
+       { props?.data?.readMore && <SecondaryMainNews route ="/news/" data={props?.data?.readMore} /> }
       </div>
     </div>
   );

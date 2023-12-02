@@ -20,7 +20,7 @@ export default async function Home() {
         )}
         </div>
         <div>
-          <SecondaryMainNews data={res.SecondaryData}/>
+          <SecondaryMainNews route="news/" data={res.SecondaryData}/>
         </div>
       </div>
 
