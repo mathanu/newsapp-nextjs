@@ -12,7 +12,7 @@ const NewsDetails = (props) => {
       <div className="md:mt-10 mt-20">
         <span className="font-bold m-2 border border-b-gray-400 text-white md:p-2 p-1 bg-red-600">
           {props.data?.type}
-        </span>
+        </span> 
         <span className="font-thin text-xs">
           Published: { dateFormat( new Date(props.data?.createdon), "mmmm dS, yyyy - h:MM TT") } - {" "}
           {props.data?.createdby}
@@ -20,7 +20,7 @@ const NewsDetails = (props) => {
         <h1 className="font-extrabold md:text-[21px] md:leading-10 leading-7 text-lg mt-4">
           {props.data?.title}
         </h1>
-        <span className="text-[11px] font-extralight">Total Read - {props?.data?.ReadCount || 127} </span>
+        <span className="text-[11px] font-extralight">Total Read - {100 + props?.data?.ReadCount} </span>
         {/* <SocialMediaButtons data={data}/> */}
       </div>
 
