@@ -27,7 +27,7 @@ const RaasiPalan = ({data}) => {
               Ragu-Kedhu 
             </li>
             <li className="p-2 m-2 cursor-pointer font-semibold">
-              Guru Peyarchi 
+              Guru Peyarchi  
             </li>
             
             <li className="p-2 m-2 cursor-pointer font-semibold">

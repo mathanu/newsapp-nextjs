@@ -1,5 +1,4 @@
 import BreakingNews from "./components/BreakingNews";
-import Header from "./components/HeaderCmp";
 import MainNews from "./components/MainNews";
 import SecondaryMainNews from "./components/SecondaryMainNews";
 import {newsData } from "./Sanity/Api"
