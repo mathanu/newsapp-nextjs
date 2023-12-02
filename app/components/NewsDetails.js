@@ -38,9 +38,9 @@ const NewsDetails = (props) => {
               {news}
             </p>
           </div>
-          {  (index%2 === 0) && props.data?.additionalimage && <div className="md:ml-20 md:mt-10"><img src={props.data?.additionalimage[index]} /> </div> }
+          { props.data?.additionalimage && <div className="md:ml-20 md:mt-10"><img src={props.data?.additionalimage[index]} /> </div> }
           <div className="md:ml-20 md:mt-10">
-            {/* <img src='https://tpc.googlesyndication.com/simgad/707352686305895210' /> */}
+            <img src='https://tpc.googlesyndication.com/simgad/707352686305895210' />
           </div>
         </div>
       ))}
