@@ -14,18 +14,18 @@ export default async function news({ params, searchParams }) {
     return <div>
       {/* <MetaDocument data={meta} /> */}
         <meta property='title' content={fetchNewsDetails?.list.title}/>
-        <meta property='og:title' content={fetchNewsDetails?.list.englishtitle}/>
+        <meta property='og:title' content={fetchNewsDetails?.list.titleEnglish}/>
         <meta property='image' content={fetchNewsDetails?.list.image} />
         <meta property='og:image' content={fetchNewsDetails?.list.image} />
-        <meta property='og:description' content={fetchNewsDetails?.list.englishtitle} />
-        <meta property='description' content={fetchNewsDetails?.list.englishtitle} />
+        <meta property='og:description' content={fetchNewsDetails?.list.titleEnglish} />
+        <meta property='description' content={fetchNewsDetails?.list.titleEnglish} />
         <meta property='og:url' content={fetchNewsDetails?.list.url}/>
         <meta property="twitter:card" value="summary_large_image"/>
         <meta property="twitter:site" value="@tamilnewsinfo"/>
         <meta property='twitter:url' content={fetchNewsDetails?.list.image}/>
         <meta property='twitter:title' content={fetchNewsDetails?.list.title}/>
         <meta property='twitter:image' content={fetchNewsDetails?.list.image} />
-        <meta property='twitter:description' content={fetchNewsDetails?.list.englishtitle} />
+        <meta property='twitter:description' content={fetchNewsDetails?.list.titleEnglish} />
         <meta property="og:image:width" content="1600"/>
         <meta property="og:image:height" content="900"/>
         <meta property="mobile-web-app-capable" content="yes"/>
