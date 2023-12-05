@@ -29,7 +29,7 @@ export const fetchNewsList = async (slug) => {
 }
 
 export const fetchHoroscope = async () => {
-  const data = await fetch(process.env.PRODAPI+"horoscope/list")
+  const data = await fetch(process.env.PRODAPI+"horoscope/list",  { cache: 'no-store' })
   const result = await data.json();
   return result;
 }

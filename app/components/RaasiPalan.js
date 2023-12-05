@@ -2,7 +2,6 @@ import React from 'react';
 import RaasiPalanDetail from "./RaasiPalanDetail";
 const RaasiPalan = ({data}) => {
 
-
   return (
     <div className="mt-[60px]">
       <div className="visible md:mx-auto md:w-[50%] mt-16 md:m-2 ml-8">
@@ -36,7 +35,7 @@ const RaasiPalan = ({data}) => {
           </ul>
         </div>
         <div className="text-center border shadow-inner md:mx-52 border-b-slate-800">
-          <h1 className="md:font-bold md:m-2 text-red-600">தினசரி ராசி பலன் : { new Date().toDateString() }</h1>
+          <h1 className="md:font-bold md:m-2 text-red-600">தினசரி ராசி பலன் : { new Date().toDateString("en-US", {timeZone: "Asia/Kolkata"}) }</h1>
         </div>
         <div className="md:mx-48 md:flex m-">
     
