@@ -7,7 +7,6 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export default async function Home() {
-
   const res = await newsData()  
   return (
     <div className={inter.className}>
@@ -22,8 +21,6 @@ export default async function Home() {
           <SecondaryMainNews route="news/" data={res.SecondaryData}/>
         </div>
       </div>
-
-     
     </div>
   );
 }

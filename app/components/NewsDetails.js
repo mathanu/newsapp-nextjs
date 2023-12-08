@@ -37,15 +37,12 @@ const NewsDetails = (props) => {
             <p className="mt-2 p-2 md:text-[17px] leading-7 md:font-[18px]">
               {news}
             </p>
+            { index === 1 && props?.data?.list?.SocialPreview && <div className="md:ml-20 md:mt-10 rounded-xl"> <div className=" rounded-xl" dangerouslySetInnerHTML={{ __html: props?.data?.list?.SocialPreview }} /> </div>  }
+
+          { props.data?.list?.additionalimage && <div className="md:ml-20 md:mt-10"><img className="rounded-xl h-96 w-96 object-contain" src={props.data?.list?.additionalimage[index]} /> </div> }   
           </div>
 
-          { index === 1 && props?.data?.list?.SocialPreview && <div className="md:ml-20 md:mt-10 rounded-xl"> <div className=" rounded-xl" dangerouslySetInnerHTML={{ __html: props?.data?.list?.SocialPreview }} /> </div>  }
-
-          {  index%2 === 0 && props.data?.list?.additionalimage && <div className="md:ml-20 md:mt-10"><img className="rounded-xl object-contain" src={props.data?.list?.additionalimage[index]} /> </div> }
-          <div className="md:ml-20 md:mt-10">
-            {/* <img src='https://tpc.googlesyndication.com/simgad/707352686305895210' /> */}
-          </div>
-    
+          
         </div>
       ))}
       <div className="md:ml-20 md:mt-10 ml-5 mt-10">
